@@ -1,6 +1,6 @@
 from sklearn import metrics
 import matplotlib.pyplot as plt
-
+import os
 
 class Helper:
 
@@ -21,6 +21,7 @@ class Helper:
             print("accuracy: %.2f" % result[2])
             Helper.print_sklearn_classification_report(result[3][0], result[3][1], result[3][2])
             dest = "confusion_" + result[1].__name__ + ".pdf"
+            dest = os.path.join("plots", dest)
             Helper.print_confusion_matrix(result[3][0], result[3][1], result[3][2], result[1].__name__, dest)
 
         names = [str(feature)+"_"+classifier.__name__ for feature, classifier, _, _ in results]
@@ -32,7 +33,7 @@ class Helper:
                         "Repetition Config",
                         "Accuracy",
                         "Experiment Evaluation",
-                        "accuracies.pdf")
+                        "plots/accuracies.pdf")
 
     @staticmethod
     def bar_plot(x_axis, y_axis, x_ticks, x_label, y_label, title, destination):

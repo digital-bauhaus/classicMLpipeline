@@ -17,7 +17,7 @@ def main():
     if classifier == "RF":
         c = RandomForest(classes, True)
         class_name = feature + "_" + str(RandomForest.__name__)
-        c.load("", class_name)
+        c.load("results", class_name)
         predicted = c.predict(text)
         print(classes[predicted[0]])
     elif classifier == "NB":

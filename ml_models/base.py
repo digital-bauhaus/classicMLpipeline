@@ -9,7 +9,7 @@ class Base:
         self.test_array = []
         self.predicted = []
 
-        self.dump_path = ""
+        self.dump_path = "results"
 
     def fit(self, x, y):
         """
