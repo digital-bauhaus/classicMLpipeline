@@ -18,9 +18,9 @@ class TextFeatures(Task):
             "SourceCodeUntilCurrentStatement"
         ]
         self.classifiers = [
-            (NaiveBayes, ["multinomial", self.classes, True]),
-            (StochasticGradientDescent, [self.classes, True]),
-            (SupportVectorClassifier, [self.classes, None, True]),
+            #(NaiveBayes, ["multinomial", self.classes, True]),
+            #(StochasticGradientDescent, [self.classes, True]),
+            #(SupportVectorClassifier, [self.classes, None, True]),
             (RandomForest, [self.classes, True])
         ]
         self.dump_path = ""
