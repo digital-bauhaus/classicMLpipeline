@@ -30,7 +30,7 @@ def main():
 
 
 def load_classes():
-    classes_path = "classes.pkl"
+    classes_path = "results/classes.pkl"
     with open(classes_path, "rb") as f:
         classes = pickle.load(f)
     return classes
