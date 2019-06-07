@@ -2,6 +2,7 @@ from ml_models.naive_bayes import NaiveBayes
 from ml_models.random_forest import RandomForest
 from ml_models.stochastic_gradient_descent import StochasticGradientDescent
 from ml_models.support_vector_classifier import SupportVectorClassifier
+from ml_models.RF_tokenizer_test import TokenizerTest
 from tasks.task import Task
 import numpy as np
 import time
@@ -21,9 +22,10 @@ class TextFeatures(Task):
             #(NaiveBayes, ["multinomial", self.classes, True]),
             #(StochasticGradientDescent, [self.classes, True]),
             #(SupportVectorClassifier, [self.classes, None, True]),
-            (RandomForest, [self.classes, True])
+            #(RandomForest, [self.classes, True])
+            (TokenizerTest, [self.classes])
         ]
-        self.dump_path = ""
+        self.dump_path = "test"
 
     def text_only_feature(self):
         results = []
